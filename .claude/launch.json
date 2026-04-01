@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "quantlab",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["/Users/jerry/quant-trading/web/app.py"],
+      "port": 5555,
+      "cwd": "/Users/jerry/quant-trading"
+    }
+  ]
+}

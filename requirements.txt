@@ -1,0 +1,12 @@
+vectorbt[full]>=0.26
+yfinance>=0.2.36
+ccxt>=4.0
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+mplfinance>=0.12
+quantstats>=0.0.62
+fpdf2>=2.8
+plotly>=5.18
+ta-lib-bin>=0.4
+scikit-learn>=1.3

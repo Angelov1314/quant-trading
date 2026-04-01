@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.DS_Store
+
+# Data cache (can be re-fetched)
+data/cache/
+
+# Generated reports
+reports/output/
+
+# Python virtual env
+venv/
+.venv/
