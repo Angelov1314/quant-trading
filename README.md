@@ -1,6 +1,6 @@
 # Quant Trading Backtest System
 
-A Python-based quantitative trading backtesting framework that supports both equities (via Interactive Brokers / yFinance) and crypto (via Binance/CCXT). Runs 5 built-in strategies, generates PDF performance reports, and ships with a Flask web UI.
+A Python-based quantitative trading backtesting framework that supports both equities (via yFinance) and crypto (via Binance/CCXT). Runs 5 built-in strategies, generates PDF performance reports, and ships with a Flask web UI.
 
 ## Features
 
@@ -30,7 +30,10 @@ A Python-based quantitative trading backtesting framework that supports both equ
 pip install -r requirements.txt
 ```
 
-> Note: `ta-lib-bin` requires a system-level TA-Lib install on some platforms.
+> Note: `ta-lib-bin` requires a system-level TA-Lib install on some platforms. Flask is not listed in `requirements.txt` — install it separately if running the web UI:
+> ```bash
+> pip install flask
+> ```
 
 ## Usage
 
@@ -62,7 +65,7 @@ python main.py --no-pdf
 python web/app.py
 ```
 
-Then open `http://localhost:5000` to use the interactive dashboard.
+Then open `http://localhost:5555` to use the interactive dashboard.
 
 ## Project Structure
 
@@ -72,7 +75,7 @@ quant-trading/
 ├── config.py                # Global configuration
 ├── requirements.txt
 ├── data/
-│   └── fetcher.py           # IBKR / Binance / yFinance data fetching
+│   └── fetcher.py           # yFinance / Binance data fetching
 ├── backtester/
 │   ├── engine.py            # Core backtest loop
 │   └── metrics.py           # Performance metric calculations
@@ -100,5 +103,5 @@ quant-trading/
 | Indicators | `ta-lib`, `pandas`, `numpy` |
 | Charting | `matplotlib`, `mplfinance`, `plotly` |
 | Reports | `fpdf2`, `quantstats` |
-| Web | `Flask` |
+| Web | `Flask` (install separately) |
 | ML (optional) | `scikit-learn` |
